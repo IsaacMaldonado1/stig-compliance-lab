@@ -65,3 +65,8 @@ The Defender (26.87%) and Firewall (15%) scores were exactly the same on both ma
 The WIN11 scan took over an hour because it was still on the HDD at the time.
 
 ## Screenshots
+
+**Server scores**
+
+
+**WIN11 scores**
