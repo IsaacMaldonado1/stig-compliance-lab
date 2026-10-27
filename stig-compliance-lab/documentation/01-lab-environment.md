@@ -14,7 +14,7 @@ This section covers the hardware, virtualization setup, and storage changes made
 
 ## Lab Storage
 
-The host's internal drive was 95% full (15 GB free), which was not enough room for the VMs, snapshots, and scan tooling. The Windows VMs were moved to a dedicated external drive.
+My internal drive was 95% full (15 GB free), which was not enough room for the VMs, snapshots, and scan tooling. All I had was a HDD that I pulled out of an old computer. Originally I moved both onto the HDD and found out quick just how much of a mistake that was. With both running, it became virtually impossible to use them. Decided to move the server to my host machine and kept windows 11 on the HDD. Also got a HDD enclosure to protect the exposed drive. 
 
 | Item | Detail |
 |---|---|
@@ -57,11 +57,9 @@ The host's internal drive was 95% full (15 GB free), which was not enough room f
 | RAM | 8 GB |
 | IP address | TBD |
 
-The original client VM ran **Windows 11 Home**, which cannot join a domain, and DISA's Windows 11 STIG assumes a business edition. It was rebuilt with a fresh disk using the Windows 11 Enterprise Evaluation, which is also the edition DoD environments use.
-
 ### Kali (scanner)
 
-Kali stays on the host's internal drive and will run the scanning tools. It is outside the assessed system boundary.
+Kali stays on the host's internal drive and will run the scanning tools. 
 
 ## Network
 
