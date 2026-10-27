@@ -14,7 +14,13 @@ This section covers the hardware, virtualization setup, and storage changes made
 
 ## Lab Storage
 
+10/26/2026 
 My internal drive was 95% full (15 GB free), which was not enough room for the VMs, snapshots, and scan tooling. All I had was a HDD that I pulled out of an old computer. Originally I moved both onto the HDD and found out quick just how much of a mistake that was. With both running, it became virtually impossible to use them. Decided to move the server to my host machine and kept windows 11 on the HDD. Also got a HDD enclosure to protect the exposed drive. 
+
+10/27/2026
+Cleaned up space on host machine and moved all vms to host. Used HDD as backup space. 
+
+
 
 | Item | Detail |
 |---|---|
