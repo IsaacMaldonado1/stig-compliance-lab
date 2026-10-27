@@ -2,12 +2,6 @@
 
 The "before" picture: how compliant the systems are before any STIG hardening.
 
-## Pre-scan checklist
-
-- [ ] WIN11 joined to `johnson.local`
-- [ ] Snapshot or backup of both VMs taken (`pre-STIG-baseline`)
-- [ ] STIG versions recorded below
-
 ## STIGs used
 
 | STIG | Version / Release | Applies to |
