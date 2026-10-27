@@ -23,8 +23,6 @@ This lab hardens the Active Directory environment built in [active-directory-hom
 | WIN11 | Domain-joined client workstation | Windows 11 Enterprise Evaluation (26H2) |
 | Kali | Scanner host (outside the assessed boundary) | Kali Linux |
 
-Network diagram: *TBD*
-
 ## Tools
 
 | Tool | Purpose |
@@ -39,11 +37,13 @@ Network diagram: *TBD*
 
 | Metric | Before | After |
 |---|---|---|
-| Server-DC01 SCC score | TBD | TBD |
-| WIN11 SCC score | TBD | TBD |
-| CAT I findings | TBD | TBD |
-| CAT II findings | TBD | TBD |
-| CAT III findings | TBD | TBD |
+| Server-DC01 2025 score | 41.08% | TBD |
+| Server Defender Score | 26.87%  | TBD |
+| Server Firewall Score | 15% | TBD |
+| WIN 11 Stig | 37.6% | TBD |
+| WIN 11 Defender | 26.87% | TBD |
+| WIN 11 Firewall | 15% | TBD |
+
 | Nessus critical/high vulnerabilities | TBD | TBD |
 
 ## Documentation
@@ -58,13 +58,4 @@ Network diagram: *TBD*
 
 See [compliance-package](compliance-package/) for the mock SSP and POA&M.
 
-## Repository Layout
 
-```
-stig-compliance-lab/
-├── README.md
-├── documentation/         step-by-step write-ups
-├── compliance-package/    SSP and POA&M
-├── scan-results/          sanitized SCC and Nessus summaries
-└── screenshots/           evidence for each step
-```
