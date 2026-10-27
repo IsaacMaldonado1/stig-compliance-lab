@@ -1,38 +1,45 @@
-# 02 – Baseline Scan
+# Baseline Scan
 
-The "before" picture: how compliant the systems are before any STIG hardening.
+## Getting and using SCC
+SCC (SCAP Compliance Checker) is a free DoD tool made by NIWC Atlantic. I used it to scan my Windows machines against the DISA STIGs and gave me a compliance score.
 
-## STIGs used
+Getting the tool was difficult and toook me longer than expected. I first checked NIWC's GitHub, but the releases page was empty. Then I tried DISA's website, and it sent me to a DoD login page that needs a CAC (military ID card). I didn't try to sign in. I was sure that the tool was publicly available as NIWC's SCAP page says it is. I saw that 5.15 is the latest version, but it only had the checksum file, not the installer. I ended up getting the installer from DISA's public download server, which didn't need a login:
 
-| STIG | Version / Release | Applies to |
+https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/scc-5.15_Windows_bundle.zip
+
+## Checking the installer
+
+## What I scanned against
+
+| Benchmark | Version | Scanned on |
 |---|---|---|
-| Microsoft Windows Server 2025 | TBD | Server-DC01 |
-| Active Directory Domain | TBD | Server-DC01 |
-| Microsoft Windows 11 | TBD | WIN11 |
-| Microsoft Defender Antivirus | TBD | Both |
+| Windows Server 2025 STIG | V1R1 | Server-DC01 |
+| Windows 11 STIG | V2R10 | WIN11 |
+| Microsoft Defender Antivirus STIG | V2R9 | Both |
+| Windows Defender Firewall STIG | V2R3 | Both |
 
-## SCAP Compliance Checker (SCC) results
+## Results
 
-| System | Score | CAT I | CAT II | CAT III |
-|---|---|---|---|---|
-| Server-DC01 | TBD | TBD | TBD | TBD |
-| WIN11 | TBD | TBD | TBD | TBD |
+### Server-DC01 (Oct 26, 2026)
 
-## Nessus Essentials results
+| Benchmark | Score | Pass | Fail | Not checked | Total |
+|---|---|---|---|---|---|
+| Windows Server 2025 | 41.08% | 99 | 142 | 29 | 291 |
+| Defender Antivirus | 26.87% | 18 | 49 | 0 | 67 |
+| Windows Firewall | 15% | 3 | 17 | 1 | 21 |
 
-| System | Critical | High | Medium | Low |
-|---|---|---|---|---|
-| Server-DC01 | TBD | TBD | TBD | TBD |
-| WIN11 | TBD | TBD | TBD | TBD |
+Average: 27.65%
 
-## Manual checks
+### WIN11 (Oct 26, 2026)
 
-Some STIG rules can't be scanned and must be reviewed by hand in STIG Viewer. Note how many there were and how they were evaluated.
+| Benchmark | Score | Pass | Fail | Not checked | Total |
+|---|---|---|---|---|---|
+| Windows 11 | 37.6% | 91 | 151 | 10 | 257 |
+| Defender Antivirus | 26.87% | 18 | 49 | 0 | 67 |
+| Windows Firewall | 15% | 3 | 17 | 1 | 21 |
 
-## Notable findings
+Average: 26.49%
 
-*Top findings and why they matter.*
+## What I noticed
 
 ## Screenshots
-
-*Add to `screenshots/02-baseline-scan/`.*
