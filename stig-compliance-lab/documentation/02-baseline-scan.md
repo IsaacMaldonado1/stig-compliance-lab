@@ -68,5 +68,12 @@ The WIN11 scan took over an hour because it was still on the HDD at the time.
 
 **Server scores**
 
+- ![Server 2025 STIG score](../screenshots/02-baseline-scan/server-2025-score.png)
+- ![Server Defender score](../screenshots/02-baseline-scan/server-defender-score.png)
+- ![Server Firewall score](../screenshots/02-baseline-scan/server-firewall-score.png)
 
 **WIN11 scores**
+
+- ![Windows 11 STIG score](../screenshots/02-baseline-scan/win11-stig-score.png)
+- ![WIN11 Defender score](../screenshots/02-baseline-scan/win11-defender-score.png)
+- ![WIN11 Firewall score](../screenshots/02-baseline-scan/win11-firewall-score.png)
