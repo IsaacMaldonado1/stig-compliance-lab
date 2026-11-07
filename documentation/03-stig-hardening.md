@@ -6,23 +6,14 @@ How the STIG settings were applied and what broke along the way.
 
 I used DISA's STIG GPO package (July 2026). I downloaded it from DISA's public download server and checked the SHA-256 hash against the one listed on NIST's National Checklist Program. It matched.
 
-## Version mismatch
-
-Upon downloading the package I found that The GPO versions don't all match the STIG versions SCC scanned with:
-
-| STIG | SCC scanned with | GPO package |
-|---|---|---|
-| Windows Server 2025 | V1R1 | V1R2 |
-| Windows 11 | V2R10 | V2R8 |
-| Defender Antivirus | V2R9 | V2R9 |
-| Windows Firewall | V2R3 | V2R2 |
-
-Windows 11 is the biggest gap. The GPO is two releases older than what SCC checks for, so some rules will probably still fail after I apply it. Anything left over will need a manual fix or will go on the POA&M.
 ## Changes applied
 
-| Stage | GPO | Linked to | Date | Result |
-|---|---|---|---|---|
-| 1 | TBD | TBD | TBD | TBD |
+| Stage | GPO | Linked to | Result |
+|---|---|---|---|
+| 1 | DOD Defender AV STIG v2r9 | Domain Controllers, Workstations | Defender 26.87% → 95.52% (both machines) |
+| 1 | DOD Windows Firewall STIG v2r2 | Domain Controllers, Workstations | Firewall 15% → 100% (both machines) |
+| 2 | DOD Windows 11 STIG Computer v2r8 | Workstations | Windows 11 37.6% → 92.98% |
+| 2 | DOD Windows 11 STIG User v2r8 | Johnsoncompany → Users | Applies to domain users (James Smith) |
 
 ## Issues encountered and fixes
 
@@ -32,12 +23,12 @@ Windows 11 is the biggest gap. The GPO is two releases older than what SCC check
 
 ## Settings intentionally not applied
 
-Every deviation needs a written justification. These carry over to the POA&M.
+These are rules I couldn’t fix in the lab. They’ll go on my POA&M (the list of known issues and how I’d fix them).
 
 | STIG ID | Rule | Reason not applied | Risk |
 |---|---|---|---|
-| TBD | TBD | TBD | TBD |
+| V-253470 | Multifactor authentication | Needs smart cards (CAC), for which I don't have | Accounts rely on passwords only which can be an issue |
+| V-253254 | Must be Windows 11 Enterprise | Lab uses Enterprise Evaluation | None |
 
 ## Screenshots
 
-*Add to `screenshots/03-stig-hardening/`.*
