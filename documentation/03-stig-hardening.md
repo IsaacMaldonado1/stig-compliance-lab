@@ -19,7 +19,13 @@ I used DISA's STIG GPO package (July 2026). I downloaded it from DISA's public d
 
 | Issue | Cause | Fix |
 |---|---|---|
+|V-253491–253495, admins should not be able to log into workstations | DISA left them empty because every domain’s group names are different | Added the Domain Admins and Enterprise Admins groups to the five “Deny log on” settings |
 | V-253273, password expiration (on WIN11) | Was set to never expire | [Unchecked](../screenshots/03-stig-hardening/password-expire.png) "Passwords Never Expire" from all accounts listed on Win11 |
+
+## How I Fixed "deny login rights"
+
+To fix this I navigated back to the server’s Group Policy Management tab → DOD Windows 11 STIG computer v2r8 GPO → edit → computer configuration → policies → windows settings → Security Settings → local policies → user rights assignment. From there I added the Domain Admins and Enterprise Admins groups to the five “Deny log on” settings. According to DISA’s Windows 11 STIG (V-253494), DISA leaves these blank because every domain’s group names are different. This leaves an extra layer of protection from a compromised PC getting access to an admin account. 
+
 
 ## Settings intentionally not applied
 
