@@ -16,10 +16,11 @@ I used DISA's STIG GPO package (July 2026). I downloaded it from DISA's public d
 | 2 | DOD Windows 11 STIG User v2r8 | Johnsoncompany → Users | Applies to domain users (James Smith) |
 
 ## Issues encountered and fixes
+screenshots/03-stig-hardening/password-expire.png
 
 | Issue | Cause | Fix |
 |---|---|---|
-| TBD | TBD | TBD |
+| V-253273, password expiration (on WIN11) | Was set to never expire | [Unchecked](../screenshots/03-stig-hardening/password-expire.png) "Passwords Never Expire" from all accounts listed on Win11 |
 
 ## Settings intentionally not applied
 
