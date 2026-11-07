@@ -21,4 +21,16 @@ I scanned both with the following:
 
 ## Screenshots
 
-*Add to `screenshots/04-rescan-results/`.*
+Server
+
+![Rescan result for server defender](../screenshots/04-rescan-results/server-defender-after-stage1.png)
+![Rescan result for server antivirus](../screenshots/04-rescan-results/server-antivirus-after-stage-1.png)
+![Rescan result for server summary](../screenshots/04-rescan-results/server-summary-after-stage1.png)
+
+Win11
+
+![Rescan result for win11 antivirus](../screenshots/04-rescan-results/win11-antivirus-after-stage-1.png)
+![Rescan result for win11 defender](../screenshots/04-rescan-results/win11-defender-after-stage-1.png)
+![Rescan result for win11 summary](../screenshots/04-rescan-results/win11-summary-after-stage-1.png)
+
+
