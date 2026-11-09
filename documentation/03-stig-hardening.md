@@ -24,7 +24,13 @@ I used DISA's STIG GPO package (July 2026). I downloaded it from DISA's public d
 
 ## How I Fixed "deny login rights"
 
-To fix this I navigated back to the server’s Group Policy Management tab and edited DOD Windows 11 STIG computer v2r8 GPO [user rights assignment](../screenshots/03-stig-hardening/admin-login.png). From there I added the Domain Admins and Enterprise Admins groups to the five “Deny log on” settings. According to DISA’s Windows 11 STIG (V-253494), DISA leaves these blank because every domain’s group names are different. This leaves an extra layer of protection from a compromised PC getting access to an admin account. 
+To fix this I navigated back to the server’s Group Policy Management tab and edited DOD Windows 11 STIG computer v2r8 GPO [user rights assignment](../screenshots/03-stig-hardening/admin-login.png). From there I added the Domain Admins and Enterprise Admins groups to the five “Deny log on” settings.
+
+- V-253470 = Deny access to this computer from the network
+- V-253492 = Deny log on as a batch job
+- V-253493 = Deny log on as a service
+- V-253494 = Deny log on locally
+- V-253495 = Deny log on through Remote Desktop Services
 
 
 ## Settings intentionally not applied
