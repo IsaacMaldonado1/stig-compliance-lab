@@ -30,7 +30,7 @@ The five rules can be found here - [Rules](../screenshots/03-stig-hardening/logi
 
 The fixes
 
-[V-253470](../screenshots/03-stig-hardening/deny-login-from-network-fix.png) = Deny access to this computer from the network
+[V-253491](../screenshots/03-stig-hardening/deny-login-from-network-fix.png) = Deny access to this computer from the network
 
 [V-253492](../screenshots/03-stig-hardening/Deny-login-as-batch-job-fix.png) = Deny log on as a batch job
 
