@@ -24,13 +24,21 @@ I used DISA's STIG GPO package (July 2026). I downloaded it from DISA's public d
 
 ## How I Fixed "deny login rights"
 
-To fix this I navigated back to the server’s Group Policy Management tab and edited DOD Windows 11 STIG computer v2r8 GPO [user rights assignment](../screenshots/03-stig-hardening/admin-login.png). From there I added the Domain Admins and Enterprise Admins groups to the five “Deny log on” settings.
+To fix this I navigated back to the server’s Group Policy Management tab and edited DOD Windows 11 STIG computer v2r8 GPO [user rights assignment](../screenshots/03-stig-hardening/admin-login.png). From there I added the Domain Admins and Enterprise Admins groups to the [five](../screenshots/03-stig-hardening/logins.png) “Deny log on” settings. Bellow are the rules that required manual fixes alongside their solutions. 
 
-- V-253470 = Deny access to this computer from the network
-- V-253492 = Deny log on as a batch job
-- V-253493 = Deny log on as a service
-- V-253494 = Deny log on locally
-- V-253495 = Deny log on through Remote Desktop Services
+The five rules can be found here - [Rules](../screenshots/03-stig-hardening/logins.png)
+
+The fixes
+
+[V-253470](../screenshots/03-stig-hardening/deny-login-from-network-fix.png) = Deny access to this computer from the network
+
+[V-253492](../screenshots/03-stig-hardening/Deny-login-as-batch-job-fix.png) = Deny log on as a batch job
+
+[V-253493](../screenshots/03-stig-hardening/Deny-login-as-service-fix.png) = Deny log on as a service
+
+[V-253494](../screenshots/03-stig-hardening/Logon-locally-fix.png) = Deny log on locally
+
+[V-253495](../screenshots/03-stig-hardening/Deny-login-remote-fix.png) = Deny log on through Remote Desktop Services
 
 
 ## Settings intentionally not applied
