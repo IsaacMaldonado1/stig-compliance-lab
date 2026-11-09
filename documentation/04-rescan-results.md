@@ -18,13 +18,12 @@ I scanned both with the following:
 | WIN11 | Defender Antivirus | 26.87% | 95.52% | +68.65 |
 | WIN11 | Windows Firewall | 15% | 100% | +85 |
 
-## Stage 2: Windows 11 GPOS
+## Stage 2: Windows 11 GPOs
 
-My goal for stage 2 was apply DISA’s Windows 11 GPOs to WIN11, see what and how much it corrects, then fix any needed manual changes. My baseline scan from Oct 26 had WIN11 at 37.6% on the Microsoft_Windows_11_STIG benchmark. I then linked DISA’s Windows 11 Computer [GPO](../screenshots/03-stig-hardening/DoD-Windows-11.png) to the Workstations OU and the User GPO to the Users OU and re-scanned. The score changed to 92.98%. A considerable jump, but 17 rules still failed and needed manual changes to further strengthen the system.
+My goal for stage 2 was to apply DISA’s Windows 11 GPOs to WIN11, see what and how much it corrects, then fix any needed manual changes. My baseline scan from Oct 26 had WIN11 at 37.6% on the Microsoft_Windows_11_STIG benchmark. I then linked DISA’s Windows 11 Computer [GPO](../screenshots/03-stig-hardening/DoD-Windows-11.png) to the Workstations OU and the User GPO to the Users OU and re-scanned. The score changed to 92.98%. A considerable jump, but 17 rules still failed and needed manual changes to further strengthen the system.
 
 [baseline scan from Oct 26](../screenshots/02-baseline-scan/win11-stig-score.png)
 
-screenshots/03-stig-hardening/DoD-Windows-11.png
 | System | STIG | Before | After |
 |---|---|---|---|
 | WIN11 | Windows 11 | 37.6% | 92.98% |

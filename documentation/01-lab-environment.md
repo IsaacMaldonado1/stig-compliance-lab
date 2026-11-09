@@ -14,13 +14,7 @@ This section covers the hardware, virtualization setup, and storage changes made
 
 ## Lab Storage
 
-10/26/2026 
-My internal drive was 95% full (15 GB free), which was not enough room for the VMs, snapshots, and scan tooling. All I had was a HDD that I pulled out of an old computer. Originally I moved both onto the HDD and found out quick just how much of a mistake that was. With both running, it became virtually impossible to use them. Decided to move the server to my host machine and kept windows 11 on the HDD. Also got a HDD enclosure to protect the exposed drive. 
-
-10/27/2026
-Cleaned up space on host machine and moved all vms to host. Used HDD as backup space. 
-
-
+The VMs originally ran off an old 1 TB HDD over USB, but it was too slow to use with both running. I cleaned up space and moved all VMs back to the host's internal drive. The HDD is now just for backups.
 
 | Item | Detail |
 |---|---|
@@ -48,9 +42,6 @@ Cleaned up space on host machine and moved all vms to host. Used HDD as backup s
 | OS | Windows Server 2025 Evaluation |
 | Role | Domain controller and DNS for `johnson.local` |
 | Firmware | BIOS (Q35 chipset) |
-| RAM / vCPU | TBD |
-| IP address | TBD |
-| Evaluation days remaining | TBD (`slmgr /dlv`) |
 
 ### WIN11
 
@@ -61,7 +52,6 @@ Cleaned up space on host machine and moved all vms to host. Used HDD as backup s
 | Firmware | UEFI with Secure Boot |
 | TPM | Emulated TPM 2.0 (`tpm-crb`) |
 | RAM | 8 GB |
-| IP address | TBD |
 
 ### Kali (scanner)
 
@@ -71,16 +61,4 @@ Kali stays on the host's internal drive and will run the scanning tools.
 
 | Item | Detail |
 |---|---|
-| Virtual network | TBD |
-| Subnet | TBD |
 | Domain | `johnson.local` |
-
-## Session Routine
-
-**Start:** plug in the drive, `sudo mount /mnt/vmlab`, start Server-DC01, wait 3–5 minutes for AD and DNS, then start WIN11.
-
-**Stop:** shut down WIN11, then Server-DC01, confirm both are off with `sudo virsh list --all`, then `sudo umount /mnt/vmlab` before unplugging.
-
-## Screenshots
-
-*Add screenshots to `screenshots/01-lab-environment/` and link them here.*

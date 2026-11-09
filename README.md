@@ -4,6 +4,10 @@ I'm hardening a small Windows domain to DoD standards (DISA STIGs) and documenti
 
 This builds on my [Active Directory homelab](https://github.com/IsaacMaldonado1/active-directory-homelab). Everything here is a lab with fictional accounts, not a real system.
 
+## Status
+
+**In progress.** Done: baseline scans, plus the Defender, Firewall, and Windows 11 GPOs applied and rescanned. Next: harden and rescan Server 2025, run Nessus, and write the mock SSP and POA&M.
+
 ## Lab setup
 
 | Machine | Role | OS |
@@ -28,12 +32,12 @@ All three run as VMs on my ThinkPad (Ubuntu, QEMU/KVM, virt-manager).
 
 | Benchmark | Before | After |
 |---|---|---|
-| Windows Server 2025 STIG | 41.08% | |
-| Server – Defender STIG | 26.87% | |
-| Server – Firewall STIG | 15% | |
-| Windows 11 STIG | 37.6% | |
-| WIN11 – Defender STIG | 26.87% | |
-| WIN11 – Firewall STIG | 15% | |
+| Windows Server 2025 STIG | 41.08% | Not rescanned yet |
+| Server – Defender STIG | 26.87% | 95.52% |
+| Server – Firewall STIG | 15% | 100% |
+| Windows 11 STIG | 37.6% | 92.98% |
+| WIN11 – Defender STIG | 26.87% | 95.52% |
+| WIN11 – Firewall STIG | 15% | 100% |
 
 ## Write-ups
 
