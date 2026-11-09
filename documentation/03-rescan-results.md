@@ -33,9 +33,9 @@ screenshots/03-stig-hardening/DoD-Windows-11.png
 
 Server
 
-![Rescan result for server defender](../screenshots/04-rescan-results/server-defender-after-stage1.png)
+![Rescan result for server defender](../screenshots/04-rescan-results/server-defender-after-stage-1.png)
 ![Rescan result for server antivirus](../screenshots/04-rescan-results/server-antivirus-after-stage-1.png)
-![Rescan result for server summary](../screenshots/04-rescan-results/server-summary-after-stage1.png)
+![Rescan result for server summary](../screenshots/04-rescan-results/server-summary-after-stage-1.png)
 
 Win11
 
