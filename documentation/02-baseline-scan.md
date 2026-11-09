@@ -17,15 +17,9 @@ Since I got the installer from a link I built myself instead of one listed on an
 - **Digital signature:** The installer is signed by NIWC Atlantic (CS.NIWC-ATLANTIC.001). Windows said the signature was OK.
 - **SHA-256 hash:** I ran `Get-FileHash` and compared it to the checksum file from NIWC's site. They matched.
 
-The installer came from DISA's server and the checksum came from NIWC's site, so a tampered file would have to fool two different official sources. This lines up with NIST 800-53 SI-7 (Software Integrity).
-
-When installing, I left the SCC Service unchecked. It's only needed for remote or scheduled scans, and I didn't want to add a service to the DC that I wasn't using (CM-7, Least Functionality).
-
 ## What I scanned against
 
 I used the STIG content that comes bundled with SCC 5.15. On the server I scanned the Windows Server 2025, Defender, and Firewall STIGs. On WIN11 I used the Windows 11 STIG instead of the server one. 
-
-SCC used the MAC-1_Classified profile, which is the default and the strictest one. I'm keeping the same STIGs and profile for the rescan so the before and after numbers are actually comparable.
 
 | Benchmark | Version | Scanned on |
 |---|---|---|
@@ -44,7 +38,6 @@ SCC used the MAC-1_Classified profile, which is the default and the strictest on
 | Defender Antivirus | 26.87% | 18 | 49 | 0 | 67 |
 | Windows Firewall | 15% | 3 | 17 | 1 | 21 |
 
-Average: 27.65%
 
 ### WIN11 (Oct 26, 2026)
 
@@ -54,7 +47,6 @@ Average: 27.65%
 | Defender Antivirus | 26.87% | 18 | 49 | 0 | 67 |
 | Windows Firewall | 15% | 3 | 17 | 1 | 21 |
 
-Average: 26.49%
 
 ## What I noticed
 
