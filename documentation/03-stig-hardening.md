@@ -49,5 +49,3 @@ These are rules I couldn’t fix in the lab. They’ll go on my POA&M (the list 
 |---|---|---|---|
 | V-253470 | Multifactor authentication | Needs smart cards (CAC), for which I don't have | Accounts rely on passwords only which can be an issue |
 | V-253254 | Must be Windows 11 Enterprise | Lab uses Enterprise Evaluation | None |
-
-Note: the DISA GPO package I used had the Firewall STIG at v2r2, but SCC 5.15 scanned against V2R3. Firewall still came back at 100%, but the versions don't match exactly.
