@@ -14,4 +14,4 @@ Sort out storage before building anything.
 
 ## How this maps to real ISSO / sysadmin work
 
-Verifying software before installing it (SI-7), not installing services I don't need (CM-7), filling in the site-specific settings DISA leaves blank, and tracking what I can't fix, like MFA without a CAC, for the POA&M.
+Verifying software before installing it, not installing services I don't need, filling in the site-specific settings DISA leaves blank, and tracking what I can't fix, like MFA without a CAC, for the POA&M.
