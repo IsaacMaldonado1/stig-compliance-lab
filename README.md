@@ -1,43 +1,20 @@
 # STIG Compliance Lab
 
-I'm hardening a small Windows domain to DoD standards (DISA STIGs) and documenting it the way a defense sysadmin or ISSO would. I scanned it before making any changes, I'm applying the STIG settings through Group Policy, and then I'll scan again to compare. At the end I'm writing a mock System Security Plan (SSP) and POA&M based on NIST 800-53.
+Hello! This is my STIG Compliance Lab. I'm doing this to learn the tools and processes the DoD uses to lock down Windows systems. For the lab I'm hardening a small Windows domain to DISA STIGs, the DoD's security configuration standards. First I ran a baseline scan on everything with SCAP Compliance Checker (SCC), then rescanned after applying DISA's GPOs. Currently, I'm fixing the issues the compliance checker flagged to get the systems up to DoD standards. My final objective is to scan with Nessus and then use Kali to test whether I hardened the machines correctly. This lab builds on my [Active Directory homelab](https://github.com/IsaacMaldonado1/active-directory-homelab).
 
-This builds on my [Active Directory homelab](https://github.com/IsaacMaldonado1/active-directory-homelab). Everything here is a lab with fictional accounts, not a real system.
+## Setup
 
-## Status
-
-**In progress.** Done: baseline scans, plus the Defender, Firewall, and Windows 11 GPOs applied and rescanned. Next: harden and rescan Server 2025, run Nessus, and write the mock SSP and POA&M.
-
-## Lab setup
-
-| Machine | Role | OS |
-|---|---|---|
-| Server-DC01 | Domain controller + DNS for johnson.local | Windows Server 2025 Standard Evaluation |
-| WIN11 | Domain-joined workstation | Windows 11 Enterprise Evaluation (26H2) |
-| Kali | Will run Nessus (not part of the assessed system) | Kali Linux 2026.2 |
-
-All three run as VMs on my ThinkPad (Ubuntu, QEMU/KVM, virt-manager).
-
-## Tools
-
-| Tool | Version | What I use it for |
-|---|---|---|
-| SCAP Compliance Checker (SCC) | 5.15 | Scanning against the STIGs |
-| QEMU/KVM + virt-manager | | Running the VMs |
-| qemu-img | | Copying, compacting, and checking VM disks |
-| Group Policy Management | | Applying STIG settings (in progress) |
-| Nessus Essentials | | Vulnerability scanning (planned) |
+Three VMs on my ThinkPad (Ubuntu, QEMU/KVM): a Windows Server 2025 domain
+controller, a Windows 11 workstation, and Kali for scanning.
 
 ## Results
 
 | Benchmark | Before | After |
 |---|---|---|
-| Windows Server 2025 STIG | 41.08% | Not rescanned yet |
-| Server – Defender STIG | 26.87% | 95.52% |
-| Server – Firewall STIG | 15% | 100% |
 | Windows 11 STIG | 37.6% | 92.98% |
-| WIN11 – Defender STIG | 26.87% | 95.52% |
-| WIN11 – Firewall STIG | 15% | 100% |
+| Defender (both machines) | 26.87% | 95.52% |
+| Firewall (both machines) | 15% | 100% |
+| Windows Server 2025 STIG | 41.08% | not rescanned yet |
 
 ## Write-ups
 
