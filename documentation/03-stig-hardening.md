@@ -41,6 +41,10 @@ The fixes
 [V-253495](../screenshots/03-stig-hardening/Deny-login-remote-fix.png) = Deny log on through Remote Desktop Services
 
 
+Another issue was V-253427 - V-253430. This has to deal with certificates and my windows machine not set up to trust DoD certificates. To do this I navigated to cybermill and downloaded the latest version of installroot. InstallRoot adds the DoD’s (and ECA’s) root certificates to Windows’ trusted list, and blocks a few cross-certificates that could create back-door trust paths.
+
+I installed the following version: InstallRoot 5.6 NIPR 64-bit Windows Installer
+
 ## Settings intentionally not applied
 
 These are rules I couldn’t fix in the lab. They’ll go on my POA&M (the list of known issues and how I’d fix them).
