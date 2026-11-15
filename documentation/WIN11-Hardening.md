@@ -76,7 +76,10 @@ Virtualization-based code integrity wasn't on. I didn't change anything; it pass
 ### BitLocker (V-253259, CAT I)
 The drive wasn't encrypted. Turning on BitLocker with a startup PIN. 
 
-Turned on Bitlocker and will re-scan after finished 
+Turned on Bitlocker and will re-scan after finished. After the scan Bitlocker passed. 
+
+Score after: 97.93%
+
 
 ### User settings (V-253425, V-253477, V-253478)
 App suggestions, lock screen notifications, and attachment zone info. These are user settings, and SCC checks them for whoever runs the scan. I ran it as Labadmin, a local account the domain User GPO doesn't apply to, so these still fail even though the GPO covers domain users like James Smith.
